@@ -2,7 +2,7 @@
 # MÓDULO: EXCEPCIONES PERSONALIZADAS, LOGGER Y CLASE CLIENTE
 # Sistema Integral de Gestión - Empresa Software FJ
 # Curso: Programación 213023 - UNAD | Fase 4
-# Desarrollado por: [Tu nombre aquí]
+# Desarrollado por: SEBASTIAN CORRO
 # =============================================================================
 # Este módulo contiene:
 #   1. Excepciones personalizadas del sistema

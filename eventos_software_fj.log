@@ -1,0 +1,36 @@
+[2026-05-01 12:57:53] [INFO] Cliente creado exitosamente: Ana Pérez (ID: 1)
+[2026-05-01 12:57:53] [INFO] Cliente creado exitosamente: Luis Gómez (ID: 2)
+[2026-05-01 12:57:53] [ERROR] El nombre debe ser texto y tener al menos 2 caracteres.
+[2026-05-01 13:36:55] [INFO] Cliente creado exitosamente: Ana Pérez (ID: 1)
+[2026-05-01 13:36:55] [INFO] Cliente creado exitosamente: Luis Gómez (ID: 2)
+[2026-05-01 13:36:55] [ERROR] El nombre debe ser texto y tener al menos 2 caracteres.
+[2026-05-01 13:41:53] [INFO] Cliente creado exitosamente: Ana Pérez (ID: 1)
+[2026-05-01 13:41:53] [INFO] Cliente creado exitosamente: Luis Gómez (ID: 2)
+[2026-05-01 13:41:53] [ERROR] El nombre debe ser texto y tener al menos 2 caracteres.
+[2026-05-01 13:50:57] [INFO] Cliente creado exitosamente: Ana Pérez (ID: 1)
+[2026-05-01 13:50:57] [INFO] Cliente creado exitosamente: Luis Gómez (ID: 2)
+[2026-05-01 13:50:57] [ERROR] El nombre debe ser texto y tener al menos 2 caracteres.
+[2026-05-01 13:51:30] [INFO] Cliente creado exitosamente: Ana Pérez (ID: 1)
+[2026-05-01 13:51:30] [INFO] Cliente creado exitosamente: Luis Gómez (ID: 2)
+[2026-05-01 13:51:30] [ERROR] El nombre debe ser texto y tener al menos 2 caracteres.
+[2026-05-01 13:59:07] [INFO] Cliente creado exitosamente: Ana Pérez (ID: 1)
+[2026-05-01 13:59:07] [INFO] Cliente creado exitosamente: Luis Gómez (ID: 2)
+[2026-05-01 13:59:07] [ERROR] El nombre debe ser texto y tener al menos 2 caracteres.
+[2026-05-01 14:10:09] [INFO] Cliente creado exitosamente: Ana Pérez (ID: 1)
+[2026-05-01 14:10:09] [INFO] Cliente creado exitosamente: Luis Gómez (ID: 2)
+[2026-05-01 14:10:09] [ERROR] El nombre debe ser texto y tener al menos 2 caracteres.
+[2026-05-01 14:10:40] [INFO] Cliente creado exitosamente: Ana Pérez (ID: 1)
+[2026-05-01 14:10:40] [INFO] Cliente creado exitosamente: Luis Gómez (ID: 2)
+[2026-05-01 14:10:40] [ERROR] El nombre debe ser texto y tener al menos 2 caracteres.
+[2026-05-01 14:11:29] [INFO] Cliente creado exitosamente: Ana Pérez (ID: 1)
+[2026-05-01 14:11:29] [INFO] Cliente creado exitosamente: Luis Gómez (ID: 2)
+[2026-05-01 14:11:29] [ERROR] El nombre debe ser texto y tener al menos 2 caracteres.
+[2026-05-01 14:16:19] [INFO] Cliente creado exitosamente: Ana Pérez (ID: 1)
+[2026-05-01 14:16:19] [INFO] Cliente creado exitosamente: Luis Gómez (ID: 2)
+[2026-05-01 14:16:19] [ERROR] El nombre debe ser texto y tener al menos 2 caracteres.
+[2026-05-01 14:24:46] [INFO] Cliente creado exitosamente: Ana Pérez (ID: 1)
+[2026-05-01 14:24:46] [INFO] Cliente creado exitosamente: Luis Gómez (ID: 2)
+[2026-05-01 14:24:46] [ERROR] El nombre debe ser texto y tener al menos 2 caracteres.
+[2026-05-01 14:24:46] [INFO] Reserva creada para Ana Pérez
+[2026-05-01 14:24:46] [INFO] Reserva confirmada para Ana Pérez
+[2026-05-01 14:24:46] [INFO] Reserva completada para Ana Pérez
