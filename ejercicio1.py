@@ -91,3 +91,21 @@ class SoftwareFJ:
             print(r.mostrar_detalle())
             print("-" * 40)
             
+# 1. Instanciar el sistema central
+sistema = SoftwareFJ()
+
+# 2. Crear clientes
+juan = Cliente("001", "Juan Perez", "juan@mail.com")
+sistema.registrar_cliente(juan)
+
+# 3. Crear servicios (Polimorfismo en acción)
+sala_reunion = Sala("Sala de Conferencias A", precio_base=50, horas=4)
+equipo_laptop = Equipo("MacBook Pro Alquiler", precio_base=30, dias=6) # Aplica descuento > 5 días
+
+# 4. Gestionar reservas
+sistema.crear_reserva(juan, sala_reunion)
+sistema.crear_reserva(juan, equipo_laptop)
+
+# 5. Ver resultados
+sistema.listar_reservas()
+
