@@ -35,9 +35,19 @@ class Asesoria(Servicio):
     def __init__(self, nombre, precio_base, nivel_complejidad):
         super().__init__(nombre, precio_base)
         self.nivel_complejidad = nivel_complejidad 
+        
+    @property
+    def nivel_complejidad(self):
+        return self._nivel_complejidad
+    
+    @nivel_complejidad.setter
+    def nivel_complejidad(self, valor):
+        if not (1 <= valor <= 3):
+            raise ServicioInvalidadoError(f"Nivel {valor} no valido. Debe ser entre 1 y 3.")
+        self._nivel_complejidad = valor
 
     def calcular_precio(self):
-        return self._precio_base * self.nivel_complejidad
+        return self._precio_base * self._nivel_complejidad
     
 class Cliente:
     def __init__(self, id_cliente, nombre, email):
@@ -73,15 +83,28 @@ class SoftwareFJ:
         self.__clientes[cliente.nombre] = cliente
         print(f"✅ Cliente {cliente.nombre} registrado con éxito.")
 
-    def crear_reserva(self, cliente, servicio):
+    def crear_reserva(self, id_cliente, servicio):
         try:
-            # Creamos la reserva vinculando los objetos
-            nueva_reserva = Reserva(cliente, servicio)
+            # validacion de existencia de cliente
+            if id_cliente not in self.__clientes:
+                raise ClienteNoEncontradoError(f"el cliente con ID {id_cliente} no existe.")
+            
+            if servicio.calcular_precio() <= 0:
+                raise ReservaError(f"El costo de la reserva no puede seer cero")
+                
+            nueva_reserva = Reserva(self.__clientes[id_cliente], servicio)
             self.__reservas.append(nueva_reserva)
-            print("🚀 Reserva procesada correctamente.")
-            return nueva_reserva
+            print(f"🚀 Reserva para {servicio._nombre} creada con exito.")
+        
+        except SoftwareFJError as e:
+            print(f"❌ Error de negocio: {e}")
+            
         except Exception as e:
-            print(f"❌ Error al crear la reserva: {e}")
+            print(f"❌ Error critico del sistema: {e}")
+            
+        finally:
+            print("✔ operacion de reserva finalizada.")
+            
 
     def listar_reservas(self):
         print("\n--- 📝 LISTADO DE RESERVAS ACTUALES ---")
@@ -108,4 +131,20 @@ sistema.crear_reserva(juan, equipo_laptop)
 
 # 5. Ver resultados
 sistema.listar_reservas()
+
+# clase base para excepciones
+class SoftwareFJError(Exception):
+    pass
+
+# se lanza cuando los parametros de un servicio son ilogicos
+class ServicioInvalidadoError(SoftwareFJError):
+    pass 
+
+# se lanza cuando se va a operar con un cliente no existente
+class ClienteNoEncontradoError(SoftwareFJError):
+    pass
+
+# errores generales en el proceso de reserva
+class ReservaError(SoftwareFJError):
+    pass
 
