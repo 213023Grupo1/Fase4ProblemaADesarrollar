@@ -1,1 +1,60 @@
+class Reserva:
+    def __init__(self, cliente, precio_noche, noches):
+        self.cliente = cliente
+        self.precio_noche = precio_noche
+        self.noches = noches
 
+    # Método para calcular total (simulando sobrecarga)
+    def calcular_total(self, descuento=0, impuesto=0, bono=0):
+        subtotal = self.precio_noche * self.noches
+        
+        # Aplicar bono (resta directa)
+        subtotal -= bono
+        
+        # Aplicar descuento (%)
+        subtotal -= subtotal * (descuento / 100)
+        
+        # Aplicar impuesto (%)
+        total = subtotal + subtotal * (impuesto / 100)
+        
+        return total
+
+    # Otra forma de "sobrecarga" usando *args
+    def calcular_total_args(self, *args):
+        subtotal = self.precio_noche * self.noches
+        
+        for arg in args:
+            if isinstance(arg, dict):
+                if "bono" in arg:
+                    subtotal -= arg["bono"]
+                if "descuento" in arg:
+                    subtotal -= subtotal * (arg["descuento"] / 100)
+                if "impuesto" in arg:
+                    subtotal += subtotal * (arg["impuesto"] / 100)
+        
+        return subtotal
+
+
+# ------------------ PRUEBAS ------------------
+
+reserva1 = Reserva("Juan", 100, 3)
+
+# Caso 1: sin nada
+print("Total básico:", reserva1.calcular_total())
+
+# Caso 2: con descuento
+print("Con descuento:", reserva1.calcular_total(descuento=10))
+
+# Caso 3: con descuento + impuesto
+print("Con descuento e impuesto:", reserva1.calcular_total(descuento=10, impuesto=19))
+
+# Caso 4: con todo
+print("Con bono, descuento e impuesto:", reserva1.calcular_total(descuento=10, impuesto=19, bono=50))
+
+
+# Usando *args
+print("Usando args:", reserva1.calcular_total_args(
+    {"bono": 50},
+    {"descuento": 10},
+    {"impuesto": 19}
+))
