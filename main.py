@@ -44,6 +44,7 @@ def ejecutar_simulacion():
     asesoria = Asesoria("Consultoría", 200, 3)
 
     print(f"Sala precio: {sala.calcular_precio()}")
+    print(f"Sala con impuesto y descuento: {sala.calcular_precio(0.19, 0.1)}")
     print(f"Equipo precio: {equipo.calcular_precio()}")
     print(f"Asesoría precio: {asesoria.calcular_precio()}")
 
